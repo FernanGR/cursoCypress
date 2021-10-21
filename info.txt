@@ -13,7 +13,16 @@ Bienvenidos al curso de Cypress.
 4.1- npm install -g npx  // problemas version 
 4.2- npx cypress install --force  // por si da problemas version en el apartado 3. fuerza su instalación
 
+--- /// <reference types="cypress" />  añadir esto arriba de la prueba para comprobar
 
 5.- npx cypress open 
 
+6.- plugin tab
+    6.1 npm install -D cypress-plugin-tab
+    6.2 require('cypress-plugin-tab')  // añadir esto la parte superior para usarlonpm install -D cypress-xpath
 
+
+
+7.- instalacion xpath
+    7.1 npm install -D cypress-xpath
+    7.2 require('cypress-xpath')  // añadir esto en la parte superior para usarlo    

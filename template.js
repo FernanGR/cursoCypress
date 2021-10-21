@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+require('cypress-plugin-tab')
+require('cypress-xpath')
 describe(" ", ()=>{
 
     it(" ", ()=>{

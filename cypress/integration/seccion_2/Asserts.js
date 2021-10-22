@@ -132,6 +132,17 @@ describe("Asserts ", ()=>{
      })
 
 
+     it("Asserts  tabla length y css",()=>{
+
+        cy.visit("https://demoqa.com/webtables");
+        cy.title().should("eq",'ToolsQA')
+        cy.wait(1000)
+
+        //ver cuantos elementos
+        cy.get("#myTable >tr >td").should("have.length",91).and("have.css","padding","8px")
+       
+     })
+
      it.only("Asserts  tabla length y css",()=>{
 
         cy.visit("https://demoqa.com/webtables");

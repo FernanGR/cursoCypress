@@ -26,3 +26,28 @@ Bienvenidos al curso de Cypress.
 7.- instalacion xpath
     7.1 npm install -D cypress-xpath
     7.2 require('cypress-xpath')  // añadir esto en la parte superior para usarlo    
+
+8.- comandos consola: 
+
+    //desde consola- pasar todos los test (cmd)
+    node_modules\.bin\cypress run    //desde cmd
+    npx cypress run   // desde gbash
+    npx cypress run --headed  // desde navegador
+    npx cypress run --borwser chrome  // navegador crhome
+    npx cypress run --spec "cypress\integration\seccion_2\Asserts.js"  // especifico
+    npx cypress run --spec "cypress\integration\seccion_1\*"  // especifico todos 
+
+
+9.- pluggin subir archivos
+https://github.com/abramenal/cypress-file-upload
+
+npm install --save-dev cypress-file-upload
+
+import 'cypress-file-upload';   //añadir en codigo
+
+10- drag and drop mouse
+https://github.com/4teamwork/cypress-drag-drop
+
+npm install --save-dev @4tw/cypress-drag-drop
+
+require('@4tw/cypress-drag-drop') // añadir al codigo

@@ -2,7 +2,9 @@
 
 require('cypress-plugin-tab')
 require('cypress-xpath')
+import { filter } from 'bluebird';
 import 'cypress-file-upload';
+import { find, first, last } from 'lodash';
 require('@4tw/cypress-drag-drop')
 
 describe(" ", ()=>{
@@ -79,3 +81,32 @@ cy.get("#sum1").invoke("attr","style","color:blue")
 
 //subir archivos ruta
 cy.get("[type='file']").attachFile(ruta)
+
+
+//mouse
+cy.get("#column-a").drag("#column-b") // arrastrar algo
+
+cy.get("#slider >.range >input").invoke("attr","value","80") // para barra slider moverla.
+
+//fors
+
+cy.get(".product-name").each(($el,index,$list)=>{
+    datos[index]=$el.text()
+    cy.log(index)
+    cy.log($list)
+    let vestido = $el.text()
+    cy.log(vestido)
+})
+
+for(let x = 0; x<=datos.length; x++){
+    //datos
+}
+
+
+// find filter  first  last next
+
+find("id")
+filter("idclass..")
+first()
+last()
+nextAll() 

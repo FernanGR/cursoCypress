@@ -26,7 +26,7 @@ describe("cypress eventos Mouse ", ()=>{
 
         cy.get("#menu-item-25089 > [href='https://www.selenium-tutorial.com/courses/'] > .menu-text").contains("Video Tutorial").trigger("mouseover")
         
-
+        cy.get("#slider >.range >input").invoke("attr","value","80")
     })
  
 

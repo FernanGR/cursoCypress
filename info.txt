@@ -51,3 +51,42 @@ https://github.com/4teamwork/cypress-drag-drop
 npm install --save-dev @4tw/cypress-drag-drop
 
 require('@4tw/cypress-drag-drop') // añadir al codigo
+
+
+11.- plantillas snippets
+
+javascript.json 
+
+//template con snippet
+
+	"Plantilla_cypress": {
+		"prefix": "c_plantilla_cypress",
+		"body": [
+			"/// <reference types='cypress' />",
+			"require('cypress-plugin-tab')",
+			"require('cypress-xpath')",
+			"import { filter } from 'bluebird';",
+			"import 'cypress-file-upload';",
+			"import { find, first, last } from 'lodash';",
+			"require('@4tw/cypress-drag-drop')",
+			"",
+			"",
+			"describe('${1:descripcion}', ()=>{",
+			"",
+				"\tit('${2:descripcion}', ()=>{",
+					"\t\tlet tiempo = 800;",
+					"\t\tcy.visit('${3:url web}');",
+					"\t\tcy.title().should('eq','${4:title}')",
+					"\t\tcy.wait(tiempo)",
+				"",
+				"\t})",
+			"",
+
+			"})",
+            
+		],
+		"description": "Plantilla cypress"
+	}
+
+
+    //

@@ -188,3 +188,11 @@ beforeEach(() => {
     cy.log("################### Final de todo #####################")
 })
 
+
+
+//comandos personalizados
+Cypress.Commands.add('Texto_visible', (selector,texto,t) => {
+    let tiempo = t
+    cy.get(selector).should('be.visible').type(texto)
+    cy.wait(tiempo)
+ })

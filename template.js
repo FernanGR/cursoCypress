@@ -196,3 +196,5 @@ Cypress.Commands.add('Texto_visible', (selector,texto,t) => {
     cy.get(selector).should('be.visible').type(texto)
     cy.wait(tiempo)
  })
+
+ cy.texto_visible(atr1,atr2,atr3) //llamada

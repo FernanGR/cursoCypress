@@ -104,3 +104,24 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   // failing the test
   return false
 })
+
+
+//configuracion de tiempos
+
+en cypress.json
+"pageLoadTime": xxxx,   // tiempo carga web
+"defaultCommandTimeout" : xxxxx,  // tiempo fallo
+
+
+//crear video de prueba  ( con el run ) 
+	$ npx cypress run --spec "cypress\integration\seccion_6\pageObject_1.js"
+
+
+// fixture para guardar datos.json y luego importarlos
+
+
+// cucumber
+	https://github.com/TheBrainFamily/cypress-cucumber-preprocessor
+		npm install --save-dev cypress-cucumber-preprocessor
+
+

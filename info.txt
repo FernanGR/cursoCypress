@@ -10,12 +10,10 @@ Bienvenidos al curso de Cypress.
 
 
 4.- node_modules\.bin\cypress open
-4.1- npm install -g npx  // problemas version 
-4.2- npx cypress install --force  // por si da problemas version en el apartado 3. fuerza su instalación
-
+ 
 --- /// <reference types="cypress" />  añadir esto arriba de la prueba para comprobar
 
-5.- npx cypress open 
+5.- npx cypress open 	//abrir cypress
 
 6.- plugin tab
     6.1 npm install -D cypress-plugin-tab
@@ -124,4 +122,20 @@ en cypress.json
 	https://github.com/TheBrainFamily/cypress-cucumber-preprocessor
 		npm install --save-dev cypress-cucumber-preprocessor
 
+	cypress/plugins/index.js	// aqui añadir :
+		const cucumber = require('cypress-cucumber-preprocessor').default
+			module.exports = (on, config) => {
+			on('file:preprocessor', cucumber())
+		}
+
+	D:\cursos\Cypress_curso_2021\cypress.json  //
+		   "testFiles": "**/*.feature" // añadiendo esto saldran solo cocumbers
+    
+	package.json:	//aqui añadir:
+		"cypress-cucumber-preprocessor": {
+		"nonGlobalStepDefinitions": true
+		}
+
+
+//jenkins
 

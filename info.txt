@@ -52,7 +52,8 @@ require('@4tw/cypress-drag-drop') // añadir al codigo
 
 
 11.- plantillas snippets
-
+ctrl+P
+escribir  >snippets y buscar: 
 javascript.json 
 
 //template con snippet

@@ -1,3 +1,6 @@
+# cursoCypress
+Curso Udemy Cypress
+
 Bienvenidos al curso de Cypress.
 
 1.- npm init
@@ -88,8 +91,7 @@ javascript.json
 	}
 
 
-12.-comandos personalizados
-
+//comandos personalizados
 ruta:
 	D:\cursos\Cypress_curso_2021\cypress\support\commands.js
 
@@ -106,21 +108,21 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 })
 
 
-13.-configuracion de tiempos
+//configuracion de tiempos
 
 en cypress.json
 "pageLoadTime": xxxx,   // tiempo carga web
 "defaultCommandTimeout" : xxxxx,  // tiempo fallo
 
 
-14.-crear video de prueba  ( con el run ) 
+//crear video de prueba  ( con el run ) 
 	$ npx cypress run --spec "cypress\integration\seccion_6\pageObject_1.js"
 
 
-15.- fixture para guardar datos.json y luego importarlos
+// fixture para guardar datos.json y luego importarlos
 
 
-16.- cocumber
+// cucumber
 	https://github.com/TheBrainFamily/cypress-cucumber-preprocessor
 		npm install --save-dev cypress-cucumber-preprocessor
 
@@ -139,9 +141,4 @@ en cypress.json
 		}
 
 
-17.- Debuguear cypress
-
-cy.pause()   // desde aqui podras avanzar paso a paso
-
-.debug() // checkea por consola la info del comando anterior
-
+//jenkins

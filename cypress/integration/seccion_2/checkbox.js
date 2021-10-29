@@ -40,17 +40,17 @@ describe("Nueva sección Checkbox ", ()=>{
 
 
      it.only("Radio Button ",()=>{
-
+        // cy.pause()
         cy.visit("https://demoqa.com/automation-practice-form");
         
         cy.title().should("eq",'ToolsQA')
+        // .debug()
         cy.wait(1000)
  
         
         cy.get("#gender-radio-1").check({force:true})
         cy.wait(1000)
         cy.get("#gender-radio-2").click({force:true})
- 
      })
  
 

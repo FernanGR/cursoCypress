@@ -145,3 +145,18 @@ cy.pause()   // desde aqui podras avanzar paso a paso
 
 .debug() // checkea por consola la info del comando anterior
 
+18.- Intercept
+ 
+ cy.intercept(
+  {
+    method: 'GET', // Route all GET requests
+    url: '/users/*', // that have a URL that matches '/users/*'
+  },
+  [] // and force the response to be: []
+).as('getUsers') // and assign an alias
+
+--------
+
+// we set the response to be the activites.json fixture
+cy.intercept('GET', '/activities/*', { fixture: 'activities.json' })
+
